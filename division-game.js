@@ -49,6 +49,7 @@ var number = 0;
 
 function check(){
   number++;
+  document.getElementById("qnumber").innerHTML = "Q" + (number + 1);
   localStorage.setItem("number", number);
   if(localStorage.getItem("answer") == document.getElementById("text").value){
     score++;
@@ -81,6 +82,7 @@ function startTimer(){
         document.getElementById("text").style.opacity = "1";
         document.getElementById("submit").style.opacity = "1";
         document.getElementById("timer").innerHTML = seconds++;
+        document.getElementById("qnumber").style.opacity = "1";
       }, 1000);
       generateQuestion();
     },
