@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+</head>
+
+<body>
+  <h1 id="score"></h1>
+  <table style="margin-left:auto;margin-right:auto;border-spacing:40px 0px">
+    <tr>
+      <td><i style="font-size:6em;color:white;margin:0 5vh 0 5vh;" class="far fa-clock"></i></td>
+      <td><i style="font-size:6em;color:white;margin:0 5vh 0 5vh;" class="fas fa-trophy"></i></td>
+      <td><i style="font-size:6em;color:white;margin:0 5vh 0 5vh;" class="fas fa-bullseye"></i></td>
+      <td><i style="font-size:6em;color:white;margin:0 5vh 0 5vh;" class="fas fa-user-clock"></i></td>
+    </tr>
+    <tr>
+      <td><h1 id="totalTime" style="font-size:2em;">Total Time</h1></td>
+      <td><h1 id="rank" style="font-size:2em;">Rank</h1></td>
+      <td><h1 id="accuracy" style="font-size:2em;">Accuracy</h1></td>
+      <td><h1 id="avgTime" style="font-size:2em;">Average Time</h1></td>
+    </tr>
+  </table>
+
+  <button onclick="window.location.href = 'main.html?' + localStorage.getItem('name');" id="submit" style="opacity:1;">Go back</button>
+  <script src="score.js"></script>
+</body>
+</html>
