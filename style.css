@@ -80,3 +80,11 @@ input{
   width:80vw;
   margin: 0 10vw 0 10vw;
 }
+
+#qnumber{
+  position:fixed;
+  top:10px;
+  left:10px;
+  margin:0px;
+  opacity:0;
+}
