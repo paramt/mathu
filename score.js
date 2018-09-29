@@ -1,7 +1,7 @@
 var score = window.location.href.split("?")[1];
 var time = window.location.href.split("?")[2];
 
-if(((score/8)*100)/time > 11){
+if(((score/8)*100)/time > 10){
   var ranks = "Gold";
 } else if(((score/8)*100)/time > 7) {
   var ranks = "Silver";
