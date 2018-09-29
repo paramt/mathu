@@ -88,3 +88,14 @@ input{
   margin:0px;
   opacity:0;
 }
+
+.login{
+  opacity:1 !important;
+  background-color:#38006b !important;
+  border:3px solid white !important;
+  
+}
+
+.login:hover{
+  background-color:#4a0072 !important;
+}
