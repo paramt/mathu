@@ -20,3 +20,7 @@ document.getElementById("totalTime").innerHTML = totalTime;
 document.getElementById("accuracy").innerHTML = accuracy;
 document.getElementById("avgTime").innerHTML = avgTime;
 document.getElementById("rank").innerHTML = rank;
+
+window.onload = function(){
+  document.getElementById("coins").innerHTML = "You received " + score*10 + " coins!";
+}

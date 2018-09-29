@@ -7,23 +7,26 @@
 </head>
 
 <body>
+  <br>
   <h1 id="score"></h1>
   <table style="margin-left:auto;margin-right:auto;border-spacing:40px 0px">
     <tr>
-      <td><i style="font-size:6em;color:white;margin:0 5vh 0 5vh;" class="far fa-clock"></i></td>
       <td><i style="font-size:6em;color:white;margin:0 5vh 0 5vh;" class="fas fa-trophy"></i></td>
       <td><i style="font-size:6em;color:white;margin:0 5vh 0 5vh;" class="fas fa-bullseye"></i></td>
+      <td><i style="font-size:6em;color:white;margin:0 5vh 0 5vh;" class="far fa-clock"></i></td>
       <td><i style="font-size:6em;color:white;margin:0 5vh 0 5vh;" class="fas fa-user-clock"></i></td>
     </tr>
     <tr>
-      <td><h1 id="totalTime" style="font-size:2em;">Total Time</h1></td>
       <td><h1 id="rank" style="font-size:2em;">Rank</h1></td>
       <td><h1 id="accuracy" style="font-size:2em;">Accuracy</h1></td>
+      <td><h1 id="totalTime" style="font-size:2em;">Total Time</h1></td>
       <td><h1 id="avgTime" style="font-size:2em;">Average Time</h1></td>
     </tr>
   </table>
 
-  <button onclick="window.location.href = 'main.html?' + localStorage.getItem('name');" id="submit" style="opacity:1;">Go back</button>
+  <br><h1 id="coins" style="font-size:2em;">You received 0 coins!</h1><br><br>
+
+  <button onclick="window.location.href = 'main.html?' + localStorage.getItem('name');" id="submit" style="opacity:1;position:fixed;bottom:5%;right:37.5%;">Go back</button>
   <script src="score.js"></script>
 </body>
 </html>
