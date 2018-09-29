@@ -2,6 +2,7 @@ window.onload = function(){
     startCountdown();
     localStorage.setItem("number", 0);
     localStorage.setItem("score", 0);
+    document.getElementById("text").style.opacity = 0;
 
     var txt = document.getElementById("text");
     var btn = document.getElementById("submit");
