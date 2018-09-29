@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+  </head>
+
+  <body>
+    <h1>Login to Mathü</h1>
+    <input id="name" placeholder="Username" style="opacity:1;"><br><br>
+    <input placeholder="Password" style="opacity:1;" type="password">
+    <input placeholder="Class Code" style="opacity:1;position:fixed;left:37.5%;bottom:30px;"> <br><br>
+    <button id="submit" style="opacity:1;background-color:#5d4037;" onclick="link(document.getElementById('name').value);">Submit</button>
+
+    <script>
+      var name = document.getElementById("name");
+
+      function link(name){
+        window.location.href = "main.html?" + name;
+      }
+    </script>
+  </body>
+</html>
