@@ -79,6 +79,9 @@ function startTimer(){
       setInterval(function() {
         document.getElementById("timer").style.opacity = "1";
         document.getElementById("text").style.opacity = "1";
+        document.getElementById("text").disabled = false;
+        document.getElementById("submit").disabled = false;
+        document.getElementById("text").focus();
         document.getElementById("submit").style.opacity = "1";
         document.getElementById("timer").innerHTML = seconds++;
         document.getElementById("qnumber").style.opacity = "1";
