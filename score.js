@@ -1,11 +1,18 @@
 var score = window.location.href.split("?")[1];
 var time = window.location.href.split("?")[2];
-var ranks = ["1st", "2nd", "3rd", "4th", "5th"]
+
+if(((score/8)*100)/time > 11){
+  var ranks = "Gold";
+} else if(((score/8)*100)/time > 7) {
+  var ranks = "Silver";
+} else {
+  var ranks = "Bronze";
+}
 
 var totalTime = "Total Time<br>" + time + "s";
 var accuracy = "Accuracy<br>" + (score/8)*100 + "%";
 var avgTime =  "Average Time<br>" + time/8 + "s";
-var rank = "Rank<br>" + ranks[Math.floor(Math.random() * ranks.length)];
+var rank = "Rank<br>" + ranks;
 
 document.getElementById("score").innerHTML = "Your score was " + score + " out of 8";
 
