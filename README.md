@@ -30,5 +30,7 @@ Name | Email
 Chris|chris_ujimoto@hotmail.com
 Param|contact@param.me
 Youcef|youcefs2121@gmail.com
+Kaarthick|worldpeace6775@gmail.com
+Shangheethan|shangheethan@gmail.com
 
 ###### This project was the winning entry in the Imagine Hackathon pitch competition at Brampton
