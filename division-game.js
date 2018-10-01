@@ -39,7 +39,7 @@ var divisors =  [ 8,  9,  5,  6, 11,  3,  5,  5,  7,  4,  8, 10,  2,  6,  8,  4,
 function generateQuestion(){
   var n = Math.floor(Math.random() * dividents.length);
 
-  var question = dividents[n] + " <i class='fas fa-divide'></i> " + divisors[n];
+  var question = dividents[n] + " &divide; " + divisors[n];
   var answer = dividents[n] / divisors[n];
 
   return [question, answer];
@@ -50,7 +50,6 @@ var number = 0;
 
 function check(){
   number++;
-  document.getElementById("qnumber").innerHTML = "Q" + (number + 1);
   localStorage.setItem("number", number);
   if(localStorage.getItem("answer") == document.getElementById("text").value){
     score++;
@@ -61,9 +60,10 @@ function check(){
   }
 
   if(number == 8){
-    console.log("Game over! " + score + " questions answered correctly out of " + number);
     window.location.href = "finish.html?" + score + "?" + seconds;
   } else {
+    document.getElementById("qnumber").innerHTML = "Q" + (number + 1);
+
     var dataset = generateQuestion();
     localStorage.setItem("answer", dataset[1]);
     document.getElementById("question").innerHTML = dataset[0];
@@ -78,13 +78,16 @@ var seconds = 0;
 function startTimer(){
   setTimeout(
     function(){
-      setInterval(function() {
+      setTimeout(function(){
         document.getElementById("timer").style.opacity = "1";
         document.getElementById("text").style.opacity = "1";
         document.getElementById("text").disabled = false;
         document.getElementById("submit").disabled = false;
         document.getElementById("text").focus();
         document.getElementById("submit").style.opacity = "1";
+      }, 1000)
+
+      setInterval(function() {
         document.getElementById("timer").innerHTML = seconds++;
         document.getElementById("qnumber").style.opacity = "1";
       }, 1000);

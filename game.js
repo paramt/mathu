@@ -48,7 +48,6 @@ var number = 0;
 
 function check(){
   number++;
-  document.getElementById("qnumber").innerHTML = "Q" + (number + 1);
   localStorage.setItem("number", number);
   if(localStorage.getItem("answer") == document.getElementById("text").value){
     score++;
@@ -59,13 +58,13 @@ function check(){
   }
 
   if(number == 8){
-    console.log("Game over! " + score + " questions answered correctly out of " + number);
     window.location.href = "finish.html?" + score + "?" + seconds;
   } else {
+    document.getElementById("qnumber").innerHTML = "Q" + (number + 1);
+
     var dataset = generateQuestion();
     localStorage.setItem("answer", dataset[1]);
     document.getElementById("question").innerHTML = dataset[0];
-
     document.getElementById("text").value = "";
     document.getElementById("text").focus();
   }
@@ -76,13 +75,16 @@ var seconds = 0;
 function startTimer(){
   setTimeout(
     function(){
-      setInterval(function() {
+      setTimeout(function(){
         document.getElementById("timer").style.opacity = "1";
         document.getElementById("text").style.opacity = "1";
         document.getElementById("text").disabled = false;
         document.getElementById("submit").disabled = false;
         document.getElementById("text").focus();
         document.getElementById("submit").style.opacity = "1";
+      }, 1000)
+
+      setInterval(function() {
         document.getElementById("timer").innerHTML = seconds++;
         document.getElementById("qnumber").style.opacity = "1";
       }, 1000);
