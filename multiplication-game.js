@@ -83,12 +83,13 @@ function startTimer(){
         document.getElementById("submit").disabled = false;
         document.getElementById("text").focus();
         document.getElementById("submit").style.opacity = "1";
+
+        setInterval(function() {
+          document.getElementById("timer").innerHTML = Math.floor((seconds++)/100);
+          document.getElementById("qnumber").style.opacity = "1";
+        }, 10);
       }, 1000)
 
-      setInterval(function() {
-        document.getElementById("timer").innerHTML = seconds++;
-        document.getElementById("qnumber").style.opacity = "1";
-      }, 1000);
       generateQuestion();
     },
   4000)
