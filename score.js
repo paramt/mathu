@@ -2,17 +2,19 @@ var score = window.location.href.split("?")[1];
 var time = (window.location.href.split("?")[2])/100;
 
 if(((score/8)*100)/time > 10){
-  var ranks = "Gold";
+  var rank = "Rank<br>Gold";
 } else if(((score/8)*100)/time > 7) {
-  var ranks = "Silver";
+  var rank = "Rank<br>Silver";
+} else if(((score/8)*100)/time > 1){
+  var rank = "Rank<br>Bronze";
 } else {
-  var ranks = "Bronze";
+  var rank = "No Rank";
+  document.getElementById("trophy-icon").className = "fas fa-times-circle";
 }
 
 var totalTime = "Total Time<br>" + time + "s";
 var accuracy = "Accuracy<br>" + (score/8)*100 + "%";
 var avgTime =  "Average Time<br>" + Math.round((time/8)*100)/100 + "s";
-var rank = "Rank<br>" + ranks;
 
 document.getElementById("score").innerHTML = "Your score was " + score + " out of 8";
 
