@@ -99,3 +99,25 @@ input{
 .login:hover{
   background-color:#4a0072 !important;
 }
+
+#class-code{
+  opacity:1;
+  position:fixed;
+  left:37.5%;
+  bottom:30px;
+}
+
+@media only screen and (max-width: 600px) {
+    #submit, #name-input, #text, #class-code{
+      width:80vw;
+    }
+    #class-code{
+      left:10vw;
+    }
+    table{
+      display:none;
+    }
+    .finish-submit{
+      position:static !important;
+    }
+}

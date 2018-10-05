@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -14,12 +15,13 @@
 
   <body>
     <h1>Login to Mathü</h1>
-    <input id="name" placeholder="Username" style="opacity:1;"><br><br>
-    <input placeholder="Class Code" style="opacity:1;position:fixed;left:37.5%;bottom:30px;">
-    <button id="submit" class="login" onclick="link(document.getElementById('name').value);">Submit</button>
+    <input autofocus id="name-input" placeholder="Username" style="opacity:1;"><br><br>
+    <input id="class-code" placeholder="Class Code">
+    <button id="submit" class="login" onclick="link(document.getElementById('name-input').value);">Submit</button>
 
     <script>
-      var name = document.getElementById("name");
+      var name = document.getElementById("name-input");
+      var btn = document.getElementById("submit");
 
       function link(name){
         if(name !== ""){
@@ -28,6 +30,14 @@
           alert("Please enter a username first!");
         }
       }
+
+      document.getElementById("name-input")
+      .addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+        btn.click();
+      }
+    });
     </script>
   </body>
 </html>
