@@ -118,7 +118,7 @@ input{
 }
 
 @media only screen and (max-width: 600px) {
-    #submit, #name-input, #text, #class-code{
+    #submit, #name-input, #text, #class-code, #submit-score{
       width:80vw;
     }
     #class-code{
