@@ -26,3 +26,7 @@ document.getElementById("rank").innerHTML = rank;
 window.onload = function(){
   document.getElementById("coins").innerHTML = "You received " + Math.round((((score/8)*100)/time)*10) + " coins!";
 }
+
+function submitScore(){
+  window.location.href = 'https://thakkaha.dev.fast.sheridanc.on.ca/pme/mathu/submit.php?s=' + ((score/8)*100)/time + "&t=" + time + "&c=" + score + "&to=8&na=" + localStorage.getItem('name');
+}

@@ -54,7 +54,7 @@ input{
   width:25%;
 }
 
-#submit{
+#submit, #submit-score{
   opacity:0;
   border:none;
   outline:none;
@@ -69,9 +69,19 @@ input{
   font-weight:200;
 }
 
-#submit:hover{
+#submit:hover, #submit-score:hover{
   background-color:#4caf50;
   cursor:pointer;
+}
+
+#submit-score{
+  background-color: white;
+  color: #7b1fa2;
+}
+
+#submit-score:hover{
+  background-color: #bcbcbc;
+  color: #7b1fa2;
 }
 
 .report{
