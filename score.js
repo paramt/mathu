@@ -1,5 +1,6 @@
 var score = window.location.href.split("?")[1];
 var time = (window.location.href.split("?")[2])/100;
+var type = window.location.href.split("?")[3];
 
 if(((score/8)*100)/time > 10){
   var rank = "Rank<br>Gold";
@@ -28,5 +29,5 @@ window.onload = function(){
 }
 
 function submitScore(){
-  window.location.href = 'https://thakkaha.dev.fast.sheridanc.on.ca/pme/mathu/submit.php?s=' + ((score/8)*100)/time + "&t=" + time + "&c=" + score + "&to=8&na=" + localStorage.getItem('name');
+  window.location.href = 'https://thakkaha.dev.fast.sheridanc.on.ca/pme/mathu/submit.php?s=' + ((score/8)*100)/time + "&t=" + time + "&c=" + score + "&to=8&na=" + localStorage.getItem('name') + "&ty" + type;
 }

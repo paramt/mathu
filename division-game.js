@@ -60,7 +60,7 @@ function check(){
   }
 
   if(number == 8){
-    window.location.href = "finish.html?" + score + "?" + seconds;
+    window.location.href = "finish.html?" + score + "?" + seconds + "?" + "division";
   } else {
     document.getElementById("qnumber").innerHTML = "Q" + (number + 1);
 
