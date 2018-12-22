@@ -1,11 +1,11 @@
-# Mathü <img align="right" width="50" height="50" src="https://raw.githubusercontent.com/paramt/mathu/master/favicon/favicon.ico">
+# Mathü <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/paramt/mathu/master/favicon/favicon.ico">
 
 Learn the basics of math with the help of powerful AI.
 
-### Concept
+## Concept
 Our vision is for Mathü to be an analytical engine that is capable of understanding student needs and adapting to individual situations. Teacher panels, AI, and head-to-head gameplay will all be added in the near future!
 
-### Algorithms
+## Algorithms
 ##### Coin Algorithm
 ```([score/time] * 10 ) rounded```
 
@@ -22,7 +22,7 @@ The score is a 0-100 number that determines the accuracy of a user. This is simp
 | ---- | ------ | ------ |
 |(score/time)>10|(score/time)>7|Anything else|
 
-### The Team
+## The Team
 The team behind Mathü consists of high school students and a high school teacher from the GTA.
 
 Name | Email
