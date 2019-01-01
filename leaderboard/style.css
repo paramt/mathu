@@ -2,6 +2,7 @@ body{
   background-color: #7b1fa2;
   text-align:center;
   color: white;
+  margin: 0;
 }
 
 h1{
@@ -9,6 +10,13 @@ h1{
   font-family: 'Fredoka One', cursive, monospace;
   font-weight:200;
   font-size:3.5em;
+}
+
+h2{
+  color: white;
+  font-family: 'Fredoka One', cursive, monospace;
+  font-weight:200;
+  font-size:2.2em;
 }
 
 td, tr{
@@ -21,4 +29,33 @@ td, tr{
 
 th{
   font-size: 1.5em;
+}
+
+code{
+  background-color: #C3B8B8;
+  padding: 8px;
+  border-radius: 5px;
+  color: black;
+}
+
+p{
+  font-family: 'Thasadith', sans-serif;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+#explanation{
+  width: 30%;
+  display: inline-block;
+}
+
+#explanation-wrapper{
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  #explanation{
+    width: 80%;
+    display: inline-block;
+  }
 }
