@@ -1,0 +1,24 @@
+body{
+  background-color: #7b1fa2;
+  text-align:center;
+  color: white;
+}
+
+h1{
+  color:white;
+  font-family: 'Fredoka One', cursive, monospace;
+  font-weight:200;
+  font-size:3.5em;
+}
+
+td, tr{
+  border: 2px solid white;
+  border-radius: 4px;
+  font-family: 'Thasadith', sans-serif;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+th{
+  font-size: 1.5em;
+}
