@@ -27,7 +27,7 @@ document.getElementById("avgTime").innerHTML = avgTime;
 document.getElementById("rank").innerHTML = rank;
 
 window.onload = function(){
-  document.getElementById("coins").innerHTML = "You received " + Math.round((((score/LIMIT)*100)/time)*10) + " coins!";
+  document.getElementById("coins").innerHTML = "You received " + Math.round((((score/LIMIT)*100)/(time/LIMIT))) + " coins!";
 }
 
 function submitScore(){
