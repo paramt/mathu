@@ -16,10 +16,16 @@
   <body>
     <h1>Login to Mathü</h1>
     <input autofocus id="name-input" placeholder="Username" style="opacity:1;"><br><br>
-    <input id="class-code" placeholder="Class Code">
+    <button id="settings" class="login" onclick="window.location.href='settings.html'">Settings</button>
     <button id="submit" class="login" onclick="link(document.getElementById('name-input').value);">Submit</button>
 
     <script>
+      window.onload = function(){
+        if(localStorage.getItem("qCount") === null){
+          localStorage.setItem("qCount", 8);
+        };
+      }
+
       var name = document.getElementById("name-input");
       var btn = document.getElementById("submit");
 

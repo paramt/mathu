@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mathu | Settings</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+  </head>
+  <body>
+    <h1>Question Count</h1>
+    <input autofocus id="qCount" style="opacity:1;" onchange="updateSettings()"><br><br>
+    <button id="submit" style="" class="login" onclick="window.location.href='/'">Back</button>
+    <script>
+      window.onload = function(){
+        document.getElementById("qCount").value = localStorage.getItem("qCount");
+      }
+
+      function updateSettings(){
+        localStorage.setItem("qCount", document.getElementById("qCount").value)
+      }
+    </script>
+  </body>
+</html>

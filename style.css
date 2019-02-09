@@ -54,6 +54,28 @@ input{
   width:25%;
 }
 
+#settings{
+  opacity:0;
+  border:none;
+  outline:none;
+  border-radius:5px;
+  line-height: 2;
+  font-size:2em;
+  text-align:center;
+  width:25%;
+  background-color:#087f23;
+  color:white;
+  font-family: 'Fredoka One', cursive;
+  font-weight:200;
+  position: absolute;
+  bottom: 3vh;
+}
+
+#settings:hover{
+  background-color:#4caf50;
+  cursor:pointer;
+}
+
 #submit, #submit-score{
   opacity:0;
   border:none;
@@ -118,7 +140,7 @@ input{
 }
 
 @media only screen and (max-width: 600px) {
-    #submit, #name-input, #text, #class-code, #submit-score{
+    #submit, #name-input, #text, #class-code, #submit-score, #settings{
       width:80vw;
     }
     #class-code{

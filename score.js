@@ -1,12 +1,14 @@
+var LIMIT = localStorage.getItem("qCount");
+
 var score = window.location.href.split("?")[1];
 var time = (window.location.href.split("?")[2])/100;
 var type = window.location.href.split("?")[3];
 
-if(((score/8)*100)/time > 10){
+if(((score/LIMIT)*100)/time > 10){
   var rank = "Rank<br>Gold";
-} else if(((score/8)*100)/time > 7) {
+} else if(((score/LIMIT)*100)/time > 7) {
   var rank = "Rank<br>Silver";
-} else if(((score/8)*100)/time > 1){
+} else if(((score/LIMIT)*100)/time > 1){
   var rank = "Rank<br>Bronze";
 } else {
   var rank = "No Rank";
@@ -14,10 +16,10 @@ if(((score/8)*100)/time > 10){
 }
 
 var totalTime = "Total Time<br>" + time + "s";
-var accuracy = "Accuracy<br>" + (score/8)*100 + "%";
-var avgTime =  "Average Time<br>" + Math.round((time/8)*100)/100 + "s";
+var accuracy = "Accuracy<br>" + Math.round((score/LIMIT)*100) + "%";
+var avgTime =  "Average Time<br>" + Math.round((time/LIMIT)*100)/100 + "s";
 
-document.getElementById("score").innerHTML = "Your score was " + score + " out of 8";
+document.getElementById("score").innerHTML = "Your score was " + score + " out of " + LIMIT;
 
 document.getElementById("totalTime").innerHTML = totalTime;
 document.getElementById("accuracy").innerHTML = accuracy;
@@ -25,9 +27,9 @@ document.getElementById("avgTime").innerHTML = avgTime;
 document.getElementById("rank").innerHTML = rank;
 
 window.onload = function(){
-  document.getElementById("coins").innerHTML = "You received " + Math.round((((score/8)*100)/time)*10) + " coins!";
+  document.getElementById("coins").innerHTML = "You received " + Math.round((((score/LIMIT)*100)/time)*10) + " coins!";
 }
 
 function submitScore(){
-  window.location.href = 'https://thakkaha.dev.fast.sheridanc.on.ca/pme/mathu/submit.php?s=' + ((score/8)*100)/time + "&t=" + time + "&c=" + score + "&to=8&na=" + localStorage.getItem('name') + "&ty=" + type;
+  window.location.href = 'https://thakkaha.dev.fast.sheridanc.on.ca/pme/mathu/submit.php?s=' + ((score/LIMIT)*100)/time + "&t=" + time + "&c=" + score + "&to=" + LIMIT + "&na=" + localStorage.getItem('name') + "&ty=" + type;
 }

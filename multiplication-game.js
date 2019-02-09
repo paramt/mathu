@@ -1,3 +1,5 @@
+var LIMIT = localStorage.getItem("qCount");
+
 window.onload = function(){
     startCountdown();
     localStorage.setItem("number", 0);
@@ -57,7 +59,7 @@ function check(){
     console.log("wrong!");
   }
 
-  if(number == 8){
+  if(number == LIMIT){
     window.location.href = "finish.html?" + score + "?" + seconds + "?" + "multiplication";
   } else {
     document.getElementById("qnumber").innerHTML = "Q" + (number + 1);
