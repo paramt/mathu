@@ -1,8 +1,10 @@
 var LIMIT = localStorage.getItem("qCount");
 
-var score = window.location.href.split("?")[1];
-var time = (window.location.href.split("?")[2])/100;
-var type = window.location.href.split("?")[3];
+var data = window.atob((window.location.href).split("finish.html?")[1]);
+
+var score = data.split("?")[0];
+var time = data.split("?")[1]/100;
+var type = data.split("?")[2];
 
 if(((score/LIMIT)*100)/time > 10){
   var rank = "Rank<br>Gold";

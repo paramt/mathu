@@ -60,7 +60,7 @@ function check(){
   }
 
   if(number == LIMIT){
-    window.location.href = "finish.html?" + score + "?" + seconds + "?" + "addition";
+    window.location.href = "finish.html?" + window.btoa(score + "?" + seconds + "?" + "addition");
   } else {
     document.getElementById("qnumber").innerHTML = "Q" + (number + 1);
 
