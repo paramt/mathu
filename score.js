@@ -30,6 +30,9 @@ document.getElementById("rank").innerHTML = rank;
 
 window.onload = function(){
   document.getElementById("coins").innerHTML = "You received " + Math.round((((score/LIMIT)*100)/(time/LIMIT))) + " coins!";
+  if(LIMIT == 10){
+    document.getElementById("submit-score").disabled = false;
+  }
 }
 
 function submitScore(){

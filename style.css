@@ -10,6 +10,21 @@ h1{
   font-size:3.5em;
 }
 
+#explanation{
+  width: 30%;
+  display: inline-block;
+}
+
+#explanation-wrapper{
+  text-align: center;
+}
+
+p{
+  color: white;
+  font-family: 'Thasadith', sans-serif;
+  font-size: 1.3em;
+}
+
 .button{
   background-color: white;
 
@@ -104,6 +119,10 @@ input{
 #submit-score:hover{
   background-color: #bcbcbc;
   color: #7b1fa2;
+}
+
+#submit-score:disabled{
+  background-color: gray;
 }
 
 .report{
