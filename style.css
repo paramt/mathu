@@ -189,19 +189,6 @@ input{
       position:static !important;
     }
     #leaderboard{
-      opacity:0;
-      border:none;
-      outline:none;
-      border-radius:5px;
-      line-height: 2;
-      font-size:2em;
-      text-align:center;
-      width:25%;
-      background-color:#087f23;
-      color:white;
-      font-family: 'Fredoka One', cursive;
-      font-weight:200;
-      position: absolute;
       bottom: 15vh;
     }
 }
