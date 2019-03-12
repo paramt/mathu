@@ -44,6 +44,27 @@ p{
   font-size: 1.3em;
 }
 
+.button{
+  margin-top: 100px;
+  border:none;
+  outline:none;
+  border-radius:5px;
+  line-height: 2;
+  font-size:2em;
+  text-align:center;
+  width:25%;
+  background-color:#38006b;
+  border:3px solid white;
+  color:white;
+  font-family: 'Fredoka One', cursive;
+  font-weight:200;
+}
+
+.button:hover{
+  background-color:#4a0072;
+  cursor:pointer;
+}
+
 #explanation{
   width: 30%;
   display: inline-block;
