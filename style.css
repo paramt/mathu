@@ -86,9 +86,26 @@ input{
   bottom: 3vh;
 }
 
-#settings:hover{
+#settings:hover, #leaderboard:hover{
   background-color:#4caf50;
   cursor:pointer;
+}
+
+#leaderboard{
+  opacity:0;
+  border:none;
+  outline:none;
+  border-radius:5px;
+  line-height: 2;
+  font-size:2em;
+  text-align:center;
+  width:25%;
+  background-color:#087f23;
+  color:white;
+  font-family: 'Fredoka One', cursive;
+  font-weight:200;
+  position: absolute;
+  bottom: 13vh;
 }
 
 #submit, #submit-score{
@@ -158,8 +175,8 @@ input{
   bottom:30px;
 }
 
-@media only screen and (max-width: 600px) {
-    #submit, #name-input, #text, #class-code, #submit-score, #settings{
+@media only screen and (max-width: 800px) {
+    #submit, #name-input, #text, #class-code, #submit-score, #settings, #leaderboard{
       width:80vw;
     }
     #class-code{
@@ -170,5 +187,21 @@ input{
     }
     .finish-submit{
       position:static !important;
+    }
+    #leaderboard{
+      opacity:0;
+      border:none;
+      outline:none;
+      border-radius:5px;
+      line-height: 2;
+      font-size:2em;
+      text-align:center;
+      width:25%;
+      background-color:#087f23;
+      color:white;
+      font-family: 'Fredoka One', cursive;
+      font-weight:200;
+      position: absolute;
+      bottom: 15vh;
     }
 }
