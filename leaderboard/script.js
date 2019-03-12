@@ -4,6 +4,10 @@ window.onload = function(){
   getData();
 }
 
+function back(){
+  window.location.href='/main.html?' + window.localStorage.getItem("name");
+}
+
 function getData(){
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
