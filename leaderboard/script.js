@@ -5,7 +5,8 @@ window.onload = function(){
 }
 
 function back(){
-  window.location.href='/main.html?' + window.localStorage.getItem("name");
+  //window.location.href='/main.html?' + window.localStorage.getItem("name");
+  window.location.href='/';
 }
 
 function getData(){
