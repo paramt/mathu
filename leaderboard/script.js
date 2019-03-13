@@ -1,5 +1,5 @@
 var data;
-var back;
+var back = "/";
 
 window.onload = function(){
   getData();
@@ -8,14 +8,6 @@ window.onload = function(){
     back = '/main.html';
   } else {
     back = '/';
-  }
-}
-
-function back(){
-  if(window.location.href.split("leaderboard/")[1] == "?fromhome"){
-    window.location.href = back;
-  } else {
-    window.location.href = back;
   }
 }
 
