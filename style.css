@@ -160,5 +160,8 @@ input{
     #explanation{
       width: 80%;
       display: inline-block;
+
+    #leaderboard{
+      bottom: 15vh;
     }
 }
