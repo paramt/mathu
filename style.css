@@ -1,6 +1,7 @@
 body{
   background-color: #7b1fa2;
   text-align:center;
+  color: white;
 }
 
 h1{
@@ -8,6 +9,32 @@ h1{
   font-family: 'Fredoka One', cursive, monospace;
   font-weight:200;
   font-size:3.5em;
+}
+
+h2{
+  color: white;
+  font-family: 'Fredoka One', cursive, monospace;
+  font-weight:200;
+  font-size:2.2em;
+}
+
+.leaderboard td, tr{
+  border: 2px solid white;
+  border-radius: 4px;
+  font-family: 'Thasadith', sans-serif;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.leaderboard th{
+  font-size: 1.5em;
+}
+
+code{
+  background-color: #C3B8B8;
+  padding: 8px;
+  border-radius: 5px;
+  color: black;
 }
 
 #explanation{
@@ -25,20 +52,38 @@ p{
   font-size: 1.3em;
 }
 
-.button{
+.circle-btn{
   background-color: white;
-
   border-radius: 50%;
   display: inline-block;
-
   font-size:10em;
   color:#7b1fa2;
   border:none;
   outline:none;
 }
 
-.button:hover{
+.circle-btn:hover{
   opacity:0.7;
+  cursor:pointer;
+}
+
+.button{
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  line-height: 2;
+  font-size: 2em;
+  text-align: center;
+  width: 25%;
+  background-color: #38006b;
+  border: 3px solid white;
+  color: white;
+  font-family: 'Fredoka One', cursive;
+  font-weight: 200;
+}
+
+.button:hover{
+  background-color:#4a0072;
   cursor:pointer;
 }
 
@@ -69,68 +114,10 @@ input{
   width:25%;
 }
 
-#settings{
-  opacity:0;
-  border:none;
-  outline:none;
-  border-radius:5px;
-  line-height: 2;
-  font-size:2em;
-  text-align:center;
-  width:25%;
-  background-color:#087f23;
-  color:white;
-  font-family: 'Fredoka One', cursive;
-  font-weight:200;
-  position: absolute;
-  bottom: 3vh;
-}
-
-#settings:hover, #leaderboard:hover{
-  background-color:#4caf50;
-  cursor:pointer;
-}
-
-#leaderboard{
-  opacity:0;
-  border:none;
-  outline:none;
-  border-radius:5px;
-  line-height: 2;
-  font-size:2em;
-  text-align:center;
-  width:25%;
-  background-color:#087f23;
-  color:white;
-  font-family: 'Fredoka One', cursive;
-  font-weight:200;
-  position: absolute;
-  bottom: 13vh;
-}
-
-#submit, #submit-score{
-  opacity:0;
-  border:none;
-  outline:none;
-  border-radius:5px;
-  line-height: 2;
-  font-size:2em;
-  text-align:center;
-  width:25%;
-  background-color:#087f23;
-  color:white;
-  font-family: 'Fredoka One', cursive;
-  font-weight:200;
-}
-
-#submit:hover, #submit-score:hover{
-  background-color:#4caf50;
-  cursor:pointer;
-}
-
 #submit-score{
   background-color: white;
   color: #7b1fa2;
+  border: none;
 }
 
 #submit-score:hover{
@@ -143,10 +130,9 @@ input{
 }
 
 .report{
-  background-color:#ffebee;
-  height:20vh;
-  width:80vw;
-  margin: 0 10vw 0 10vw;
+  margin-left: auto;
+  margin-right: auto;
+  border-spacing: 40px 0px;
 }
 
 #qnumber{
@@ -157,51 +143,22 @@ input{
   opacity:0;
 }
 
-.login{
-  opacity:1 !important;
-  background-color:#38006b !important;
-  border:3px solid white !important;
-
-}
-
-.login:hover{
-  background-color:#4a0072 !important;
-}
-
-#class-code{
-  opacity:1;
-  position:fixed;
-  left:37.5%;
-  bottom:30px;
-}
-
 @media only screen and (max-width: 800px) {
-    #submit, #name-input, #text, #class-code, #submit-score, #settings, #leaderboard{
-      width:80vw;
+    .button, #submit, #name-input, #text, #class-code, #submit-score{
+      width: 80vw;
+      left: 10vw;
     }
-    #class-code{
-      left:10vw;
+
+    .report{
+      display: none;
     }
-    table{
-      display:none;
-    }
+
     .finish-submit{
       position:static !important;
     }
-    #leaderboard{
-      opacity:0;
-      border:none;
-      outline:none;
-      border-radius:5px;
-      line-height: 2;
-      font-size:2em;
-      text-align:center;
-      width:25%;
-      background-color:#087f23;
-      color:white;
-      font-family: 'Fredoka One', cursive;
-      font-weight:200;
-      position: absolute;
-      bottom: 15vh;
+
+    #explanation{
+      width: 80%;
+      display: inline-block;
     }
 }

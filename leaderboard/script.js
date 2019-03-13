@@ -5,8 +5,11 @@ window.onload = function(){
 }
 
 function back(){
-  //window.location.href='/main.html?' + window.localStorage.getItem("name");
-  window.location.href='/';
+  if(window.location.href.split("leaderboard/")[1] == "?fromhome"){
+    window.location.href='/';
+  } else {
+    window.location.href='/main.html';
+  }
 }
 
 function getData(){
@@ -14,7 +17,6 @@ function getData(){
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       data = JSON.parse(this.responseText);
-      console.log(this.responseText)
       updateLeaderboard();
     }
   };

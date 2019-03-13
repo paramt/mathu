@@ -16,9 +16,9 @@
   <body>
     <h1>Mathü</h1>
     <input autofocus id="name-input" placeholder="Display Name" style="opacity:1;"><br><br>
-    <button id="settings" class="login" onclick="window.location.href='settings.html'">Settings</button>
-    <button id="leaderboard" class="login" onclick="window.location.href='leaderboard'">Leaderboard</button>
-    <button id="submit" class="login" onclick="link(document.getElementById('name-input').value);">Start</button>
+    <button class="button" style="position: absolute; bottom: 3vh;" onclick="window.location.href='settings.html'">Settings</button>
+    <button id="leaderboard" class="button" style="position: absolute; bottom: 13vh;" onclick="window.location.href='leaderboard/?fromhome'">Leaderboard</button>
+    <button id="submit" class="button" onclick="link(document.getElementById('name-input').value);">Start</button>
 
     <script>
       window.onload = function(){
@@ -27,12 +27,12 @@
         };
       }
 
-      var name = document.getElementById("name-input");
       var btn = document.getElementById("submit");
 
       function link(name){
         if(name !== ""){
-          window.location.href = "main.html?" + name;
+          localStorage.setItem("name", name)
+          window.location.href = "main.html";
         } else {
           alert("Please enter a username first!");
         }

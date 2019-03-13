@@ -1,10 +1,8 @@
 var LIMIT = localStorage.getItem("qCount");
 
-var data = window.atob((window.location.href).split("finish.html?")[1]);
-
-var score = data.split("?")[0];
-var time = data.split("?")[1]/100;
-var type = data.split("?")[2];
+var score = window.atob(localStorage.getItem("score"));
+var time = window.atob(localStorage.getItem("seconds"))/100;
+var type = localStorage.getItem("type");
 
 if(((score/LIMIT)*100)/time > 10){
   var rank = "Rank<br>Gold";
@@ -36,5 +34,5 @@ window.onload = function(){
 }
 
 function submitScore(){
-  window.location.href = 'https://thakkaha.dev.fast.sheridanc.on.ca/pme/mathu/submit.php?s=' + ((score/LIMIT)*100)/time + "&t=" + time + "&c=" + score + "&to=" + LIMIT + "&na=" + localStorage.getItem('name') + "&ty=" + type;
+  window.location.href = "submit.html";
 }

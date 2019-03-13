@@ -1,4 +1,5 @@
 var LIMIT = localStorage.getItem("qCount");
+var TYPE = localStorage.getItem("type")
 
 window.onload = function(){
     startCountdown();
@@ -35,14 +36,36 @@ function startCountdown(){
   startTimer();
 }
 
+
 function generateQuestion(){
   var a = Math.floor(Math.random() * 10);
   var b = Math.floor(Math.random() * 10);
 
-  var question = a + " + " + b;
-  var answer = a + b;
+  if(TYPE == "addition"){
+    var question = a + " + " + b;
+    var answer = a + b;
+  }
 
-  return [question, answer];
+  if(TYPE == "subtraction"){
+    var question = a + " - " + b;
+    var answer = a - b;
+  }
+
+  if(TYPE == "multiplication"){
+    var question = a + " &times; " + b;
+    var answer = a * b;
+  }
+
+  if(TYPE == "division"){
+    var question = a*b + " &divide; " + b;
+    var answer = (a*b) / b;
+  }
+
+  if(question == document.getElementById("question").innerHTML){
+    generateQuestion()
+  } else {
+    return [question, answer];
+  }
 }
 
 var score = 0;
@@ -51,19 +74,18 @@ var number = 0;
 function check(){
   number++;
   localStorage.setItem("number", number);
+  
   if(localStorage.getItem("answer") == document.getElementById("text").value){
     score++;
     localStorage.setItem("score", score);
-    console.log("correct!");
-  } else {
-    console.log("wrong!");
   }
 
   if(number == LIMIT){
-    window.location.href = "finish.html?" + window.btoa(score + "?" + seconds + "?" + "addition");
+    localStorage.setItem("score", window.btoa(score))
+    localStorage.setItem("seconds", window.btoa(seconds))
+    window.location.href = "finish.html";
   } else {
     document.getElementById("qnumber").innerHTML = "Q" + (number + 1);
-
     var dataset = generateQuestion();
     localStorage.setItem("answer", dataset[1]);
     document.getElementById("question").innerHTML = dataset[0];

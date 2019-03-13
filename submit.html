@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mathu | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+  </head>
+  <body>
+    <h1>Submitting...</h1>
+
+    <form style="visibility: hidden" id="form" method="POST" action="https://thakkaha.dev.fast.sheridanc.on.ca/pme/mathu/submit.php">
+      <input id="score" name="s">
+      <input id="time" name="t">
+      <input id="correct" name="c">
+      <input id="total" name="to">
+      <input id="name" name="na">
+      <input id="type" name="ty">
+    </form>
+
+    <script>
+      var LIMIT = localStorage.getItem("qCount");
+      var score = window.atob(localStorage.getItem("score"));
+      var time = window.atob(localStorage.getItem("seconds"))/100;
+
+      document.getElementById("score").value = ((score/LIMIT)*100)/time;
+      document.getElementById("time").value = time;
+      document.getElementById("correct").value = score;
+      document.getElementById("total").value = LIMIT;
+      document.getElementById("name").value = localStorage.getItem('name');
+      document.getElementById("type").value = localStorage.getItem("type");
+
+      window.onload = function() {
+        document.getElementById("form").submit()
+      }
+
+    </script>
+  </body>
+</html>

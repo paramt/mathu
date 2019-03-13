@@ -4,9 +4,11 @@ var btn3 = document.getElementById("btn-3");
 var btn4 = document.getElementById("btn-4");
 
 window.onload = function(){
-  document.getElementById('name').innerHTML = "Welcome, " + window.location.href.split('?')[1].replace(/%20/g, " ");;
-  localStorage.setItem("name", window.location.href.split('?')[1]);
+  document.getElementById('name').innerHTML = "Welcome, " + localStorage.getItem("name");
+  resizeButtons()
+};
 
+function resizeButtons(){
   btn1.style.width = window.innerWidth/5 + "px";
   btn1.style.height = window.innerWidth/5 + "px";
   btn2.style.width = window.innerWidth/5 + "px";
@@ -53,4 +55,9 @@ window.onload = function(){
     btn4.style.marginLeft = window.innerWidth/30 + "px";
     btn4.style.marginTop = window.innerWidth/50 + "px";
   }
-};
+}
+
+function link(type){
+  localStorage.setItem("type", type);
+  window.location.href = "game.html";
+}
