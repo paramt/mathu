@@ -1,14 +1,21 @@
 var data;
+var back;
 
 window.onload = function(){
   getData();
+  if(window.location.href.split("leaderboard/")[1].split(0, 1) == "?"){
+    document.getElementById("heading").innerHTML = "Your score: " + window.location.href.split("leaderboard/?")[1];
+    back = '/main.html';
+  } else {
+    back = '/';
+  }
 }
 
 function back(){
   if(window.location.href.split("leaderboard/")[1] == "?fromhome"){
-    window.location.href='/';
+    window.location.href = back;
   } else {
-    window.location.href='/main.html';
+    window.location.href = back;
   }
 }
 
