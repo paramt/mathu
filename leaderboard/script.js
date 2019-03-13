@@ -3,7 +3,7 @@ var back;
 
 window.onload = function(){
   getData();
-  if(window.location.href.split("leaderboard/")[1].split(0, 1) == "?"){
+  if(window.location.href.split("leaderboard/")[1].substring(0, 1) == "?"){
     document.getElementById("heading").innerHTML = "Your score: " + window.location.href.split("leaderboard/?")[1];
     back = '/main.html';
   } else {
