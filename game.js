@@ -57,8 +57,12 @@ function generateQuestion(){
   }
 
   if(TYPE == "division"){
-    var question = a*b + " &divide; " + b;
-    var answer = (a*b) / b;
+    if(b == 0){
+      generateQuestion()
+    } else {
+      var question = a*b + " &divide; " + b;
+      var answer = (a*b) / b;
+    }
   }
 
   if(question == document.getElementById("question").innerHTML){
