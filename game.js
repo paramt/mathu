@@ -57,12 +57,12 @@ function generateQuestion(){
   }
 
   if(TYPE == "division"){
-    if(b == 0){
-      generateQuestion()
-    } else {
-      var question = a*b + " &divide; " + b;
-      var answer = (a*b) / b;
+    while(b == 0){
+      b = Math.floor(Math.random() * 10);
     }
+
+    var question = a*b + " &divide; " + b;
+    var answer = (a*b) / b;
   }
 
   if(question == document.getElementById("question").innerHTML){
@@ -78,7 +78,7 @@ var number = 0;
 function check(){
   number++;
   localStorage.setItem("number", number);
-  
+
   if(localStorage.getItem("answer") == document.getElementById("text").value){
     score++;
     localStorage.setItem("score", score);
