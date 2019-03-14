@@ -22,6 +22,10 @@
 
     <script>
       window.onload = function(){
+        if(localStorage.getItem("name") !== null){
+          document.getElementById("name-input").value = localStorage.getItem("name");
+        }
+
         if(localStorage.getItem("qCount") === null){
           localStorage.setItem("qCount", 10);
         };
