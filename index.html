@@ -29,6 +29,10 @@
         if(localStorage.getItem("qCount") === null){
           localStorage.setItem("qCount", 10);
         };
+
+        if(localStorage.getItem("negSubtraction") === null){
+          localStorage.setItem("negSubtraction", true);
+        };
       }
 
       var btn = document.getElementById("submit");

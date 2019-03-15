@@ -1,5 +1,6 @@
 var LIMIT = localStorage.getItem("qCount");
-var TYPE = localStorage.getItem("type")
+var TYPE = localStorage.getItem("type");
+var NEG = JSON.parse(localStorage.getItem("negSubtraction"));
 
 window.onload = function(){
     startCountdown();
@@ -47,8 +48,13 @@ function generateQuestion(){
   }
 
   if(TYPE == "subtraction"){
-    var question = a + " - " + b;
-    var answer = a - b;
+    if(NEG == true){
+      var question = a + " - " + b;
+      var answer = a - b;
+    } else {
+      var question = Math.max(a, b) + " - " + Math.min(a, b);
+      var answer = Math.max(a, b) - Math.min(a, b);
+    }
   }
 
   if(TYPE == "multiplication"){

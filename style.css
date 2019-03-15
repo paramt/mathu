@@ -87,6 +87,22 @@ p{
   cursor:pointer;
 }
 
+.bottom{
+  position: absolute;
+  bottom: 2vh;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.red{
+  background-color: #8e0707;
+}
+
+.red:hover{
+  background-color: #a80a0a;
+}
+
 .top{
   height:10vh;
 }
@@ -112,6 +128,11 @@ input{
   font-size:2em;
   text-align:center;
   width:25%;
+}
+
+input[type=checkbox]{
+  width: 0.8em;
+  height: 0.8em;
 }
 
 #submit-score{

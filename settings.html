@@ -14,23 +14,41 @@
     <link rel="shortcut icon" href="/favicon/favicon.ico">
   </head>
   <body>
-    <h1>Question Count</h1>
+    <h1>Settings</h1>
     <div id="explanation-wrapper">
       <div id="explanation">
-        <p>By changing the question count to anything other than 10, you will not be able to submit your score to the leaderboard. This is to enforce fair play.</p>
+        <p>You will not be able to submit your score if you change any of these settings.</p>
       </div>
     </div>
 
-    <input autofocus id="qCount" style="opacity:1;" onchange="updateSettings()"><br><br>
-    <button id="submit" class="button" onclick="window.location.href='/'">Back</button>
+    <h2>Question Count</h2>
+    <input autofocus id="qCount" style="opacity:1;"><br><br><br>
+
+    <input type="checkbox" autofocus id="include-neg" style="opacity:1;">
+    <h2 style="display: inline;">Include Negative Numbers</h2><br><br><br>
+
+    <button class="button red" onclick="resetSettings();">Reset</button><br><br>
+    <button class="button" onclick="updateSettings(); history.back(-1)">Save</button>
+
     <script>
       window.onload = function(){
         document.getElementById("qCount").value = localStorage.getItem("qCount");
+        document.getElementById("include-neg").checked = JSON.parse(localStorage.getItem("negSubtraction"));
       }
 
       function updateSettings(){
-        localStorage.setItem("qCount", document.getElementById("qCount").value)
+        localStorage.setItem("qCount", document.getElementById("qCount").value);
+        localStorage.setItem("negSubtraction", document.getElementById("include-neg").checked);
       }
+
+      function resetSettings(){
+        document.getElementById("qCount").value = 10;
+        document.getElementById("include-neg").checked = true;
+
+        localStorage.setItem("qCount", 10);
+        localStorage.setItem("include-neg", true)
+      }
+
     </script>
   </body>
 </html>
