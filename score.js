@@ -1,4 +1,5 @@
 var LIMIT = localStorage.getItem("qCount");
+var NEG = JSON.parse(localStorage.getItem("negSubtraction"));
 
 var score = window.atob(localStorage.getItem("score"));
 var time = window.atob(localStorage.getItem("seconds"))/100;
@@ -28,7 +29,7 @@ document.getElementById("rank").innerHTML = rank;
 
 window.onload = function(){
   document.getElementById("coins").innerHTML = "You received " + Math.round((((score/LIMIT)*100)/(time/LIMIT))) + " coins!";
-  if(LIMIT == 10){
+  if(LIMIT == 10 && NEG == true){
     document.getElementById("submit-score").disabled = false;
   }
 }
