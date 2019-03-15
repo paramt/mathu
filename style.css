@@ -107,8 +107,17 @@ p{
   height:10vh;
 }
 
-.countdown{
-  transition: opacity 1s;
+#countdown-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#countdown{
+  transition: opacity 0.25s;
+  font-size: 8em;
 }
 
 #timer{
@@ -181,8 +190,13 @@ input[type=checkbox]{
     #explanation{
       width: 80%;
       display: inline-block;
+    }
 
     #leaderboard{
       bottom: 15vh;
+    }
+
+    #countdown{
+      font-size: 5em;
     }
 }

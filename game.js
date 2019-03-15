@@ -13,7 +13,6 @@ window.onload = function(){
 
     text.value = "";
 
-
     txt.addEventListener("keyup", function(event) {
       event.preventDefault();
       if (event.keyCode === 13) {
@@ -23,11 +22,15 @@ window.onload = function(){
 }
 
 function startCountdown(){
-  setTimeout(function(){document.getElementById("countdown").innerHTML = "3"}, 1000);
-  setTimeout(function(){document.getElementById("countdown").innerHTML = "2"}, 2000);
-  setTimeout(function(){document.getElementById("countdown").innerHTML = "1"}, 3000);
-  setTimeout(function(){document.getElementById("countdown").innerHTML = "Start!"}, 4000);
-  setTimeout(function(){document.getElementById("countdown").style.visibility = "hidden"}, 5000);
+  setTimeout(function(){document.getElementById("countdown").style.opacity = "0";}, 800);
+  setTimeout(function(){document.getElementById("countdown").style.opacity = "1"; document.getElementById("countdown").innerHTML = "3"}, 1000);
+  setTimeout(function(){document.getElementById("countdown").style.opacity = "0";}, 1800);
+  setTimeout(function(){document.getElementById("countdown").style.opacity = "1"; document.getElementById("countdown").innerHTML = "2"}, 2000);
+  setTimeout(function(){document.getElementById("countdown").style.opacity = "0";}, 2800);
+  setTimeout(function(){document.getElementById("countdown").style.opacity = "1"; document.getElementById("countdown").innerHTML = "1"}, 3000);
+  setTimeout(function(){document.getElementById("countdown").style.opacity = "0";}, 3800);
+  setTimeout(function(){document.getElementById("countdown").style.opacity = "1"; document.getElementById("countdown").innerHTML = "Go!"}, 4000);
+  setTimeout(function(){document.getElementById("countdown-wrapper").style.visibility = "hidden"; document.getElementById("countdown-wrapper").style.height = "15vh"}, 5000);
   setTimeout(function(){
     var dataset = generateQuestion();
 
