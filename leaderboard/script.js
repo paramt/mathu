@@ -28,16 +28,24 @@ function updateLeaderboard(){
   document.getElementById('1a').innerHTML = data.addition[0];
   document.getElementById('2a').innerHTML = data.addition[1];
   document.getElementById('3a').innerHTML = data.addition[2];
+  document.getElementById('4a').innerHTML = data.addition[3];
+  document.getElementById('5a').innerHTML = data.addition[4];
 
   document.getElementById('1b').innerHTML = data.subtraction[0];
   document.getElementById('2b').innerHTML = data.subtraction[1];
   document.getElementById('3b').innerHTML = data.subtraction[2];
+  document.getElementById('4b').innerHTML = data.subtraction[3];
+  document.getElementById('5b').innerHTML = data.subtraction[4];
 
   document.getElementById('1c').innerHTML = data.multiplication[0];
   document.getElementById('2c').innerHTML = data.multiplication[1];
   document.getElementById('3c').innerHTML = data.multiplication[2];
+  document.getElementById('4c').innerHTML = data.multiplication[3];
+  document.getElementById('5c').innerHTML = data.multiplication[4];
 
   document.getElementById('1d').innerHTML = data.division[0];
   document.getElementById('2d').innerHTML = data.division[1];
   document.getElementById('3d').innerHTML = data.division[2];
+  document.getElementById('4d').innerHTML = data.division[3];
+  document.getElementById('5d').innerHTML = data.division[4];
 }
