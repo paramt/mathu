@@ -93,7 +93,7 @@ function check(){
     localStorage.setItem("score", score);
   }
 
-  if(number == LIMIT){
+  if(number >= LIMIT){
     localStorage.setItem("score", window.btoa(score))
     localStorage.setItem("seconds", window.btoa(seconds))
     window.location.href = "finish.html";
