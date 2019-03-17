@@ -3,23 +3,28 @@ var TYPE = localStorage.getItem("type");
 var NEG = JSON.parse(localStorage.getItem("negSubtraction"));
 
 window.onload = function(){
-    startCountdown();
-    localStorage.setItem("number", 0);
-    localStorage.setItem("score", 0);
-    document.getElementById("text").style.opacity = 0;
+  startCountdown();
+  localStorage.setItem("number", 0);
+  localStorage.setItem("score", 0);
+  document.getElementById("text").style.opacity = 0;
 
-    var txt = document.getElementById("text");
-    var btn = document.getElementById("submit");
+  var txt = document.getElementById("text");
+  var btn = document.getElementById("submit");
 
-    text.value = "";
+  text.value = "";
 
-    txt.addEventListener("keyup", function(event) {
-      event.preventDefault();
-      if (event.keyCode === 13) {
-        btn.click();
-      }
-    });
+  txt.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+      btn.click();
+    }
+  });
 }
+
+// Refresh game if user tabs out (this is a temporary solution to prevent cheaters from abusing how the timer pauses when tab is not in focus; a better solution would be to continue the timer in the background)
+window.addEventListener('blur', function(){
+  document.location.reload();
+});
 
 function startCountdown(){
   setTimeout(function(){document.getElementById("countdown").style.opacity = "0";}, 800);
