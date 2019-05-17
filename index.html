@@ -41,6 +41,9 @@
         if(name == name.toUpperCase()){
           name = name.toLowerCase();
         }
+        
+        localStorage.setItem("name", name);
+        window.location.href = "main.html";
       }
 
       document.getElementById("name-input")
