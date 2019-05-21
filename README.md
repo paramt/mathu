@@ -1,4 +1,6 @@
-# Mathü <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/paramt/mathu/master/favicon/favicon.ico">
+# Mathü <img align="left" width="50" height="50" src="favicon/favicon.ico">
+
+<img width=45% src=screenshots/game.png> <img width=45% src=screenshots/score.png>
 
 Learn the basics of math with the help of powerful AI.
 
