@@ -1,8 +1,7 @@
 # Mathü <img align="left" width="50" height="50" src="favicon/favicon.ico">
-
-<img width=45% src=screenshots/game.png> <img width=45% src=screenshots/score.png>
-
 Learn the basics of math with the help of powerful AI.
+
+<img width=49% src=screenshots/game.png> <img width=49% src=screenshots/score.png>
 
 ## Concept
 Our vision is for Mathü to be an analytical engine that is capable of understanding student needs and adapting to individual situations. Teacher panels, AI, and head-to-head gameplay will all be added in the near future!
