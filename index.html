@@ -15,7 +15,7 @@
 
   <body>
     <h1>Mathü</h1>
-    <input autofocus id="name-input" placeholder="Display Name" style="opacity:1;"><br><br>
+    <input autofocus maxlength="11" id="name-input" placeholder="Display Name" style="opacity:1;"><br><br>
     <button class="button" style="position: absolute; bottom: 3vh;" onclick="window.location.href='settings.html'">Settings</button>
     <button id="leaderboard" class="button" style="position: absolute; bottom: 13vh;" onclick="window.location.href='leaderboard/'">Leaderboard</button>
     <button id="submit" class="button" onclick="link(document.getElementById('name-input').value);">Start</button>
@@ -41,7 +41,7 @@
         if(name == name.toUpperCase()){
           name = name.toLowerCase();
         }
-        
+
         localStorage.setItem("name", name);
         window.location.href = "main.html";
       }
