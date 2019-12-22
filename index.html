@@ -42,6 +42,10 @@
           name = name.toLowerCase();
         }
 
+        if(name.length > 11){
+          name = name.substring(0, 11);
+        }
+
         localStorage.setItem("name", name);
         window.location.href = "main.html";
       }
